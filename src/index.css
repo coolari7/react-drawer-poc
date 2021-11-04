@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --timeout: 250ms;
+}
+
+@layer components {
+  .btn {
+    @apply text-sm font-semibold p-2 rounded-sm text-white bg-indigo-600 hover:bg-indigo-900;
+  }
+
+  .full-screen {
+    @apply absolute inset-0;
+  }
+}

@@ -1,0 +1,17 @@
+.panel-enter {
+  transform: translateX(-100%);
+}
+
+.panel-enter-active {
+  transform: none;
+  transition: transform var(--timeout) linear;
+}
+
+.panel-exit {
+  transform: none;
+}
+
+.panel-exit-active {
+  transform: translateX(-100%);
+  transition: transform var(--timeout) linear;
+}
