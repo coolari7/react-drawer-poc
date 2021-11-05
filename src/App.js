@@ -11,19 +11,21 @@ export default function App() {
 
   return (
     <div className="m-2">
-      <div className="float-right">
+      <div className="flex justify-end mb-2">
         <Button onClick={() => setOpen(true)}>Open Drawer</Button>
       </div>
 
-      <div
-        style={{ width: "200px", height: "200px" }}
-        className="ml-36 border-2 border-gray-300 relative"
-      >
-        <div className="float-right p-2">
-          <Button onClick={() => setOpen2(true)}>Open</Button>
+      <div className="flex justify-end mb-2">
+        <div
+          style={{ width: "200px", height: "200px" }}
+          className="ml-36 border-2 border-gray-300 relative"
+        >
+          <div className="flex justify-end p-2">
+            <Button onClick={() => setOpen2(true)}>Open</Button>
+          </div>
+          <Backdrop open={open2} onClose={() => setOpen2(false)} />
+          <Panel open={open2}></Panel>
         </div>
-        <Backdrop open={open2} onClose={() => setOpen2(false)} />
-        <Panel open={open2}></Panel>
       </div>
 
       <Drawer open={open} timeout={250} onClose={() => setOpen(false)}>
